@@ -1,0 +1,41 @@
+
+<!-- serve para fazer o include {{> cabecalho}}-->
+{{> cabecalho}}
+<h1>veja bem vindo(a) :{{titlepage}}</h1>
+
+
+{{h.DefaultsTitlePage}}
+<p>seu nome: {{nome}}</p>
+<p>sua idade : {{idade}}</p>
+{{^mostar}} server condição false para não aparecer
+<h1>informção informada</h1>
+{{/mostar}}
+
+
+
+
+
+<ul>
+{{#incredientes}} <!-- serve para quando tiver uma codição true vai aparecer-->
+    <li>{{nome}} - {{qt}}</li>
+{{/incredientes}}
+</ul>
+<hr>
+
+<ul>
+{{#interesse}}
+    <li>{{.}}</li> <!-- serve como foreach-->
+{{/interesse}}
+</ul>
+
+<hr>
+
+<hr>
+
+{{#teste}}
+    <h1>{{{teste}}}</h1>
+{{/teste}}
+<p>USUARIO LOGADO:{{userInfo.name}}</p>
+
+
+<!-- o {{#}} é uma codição if e {{/}}--  e o quando for falso utilizamos o >

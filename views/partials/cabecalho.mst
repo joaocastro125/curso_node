@@ -1,0 +1,22 @@
+
+<html>
+<head>
+{{#titlepage}}
+<title>{{titlepage}}</title>
+{{/titlepage}}
+</head>
+{{^titlepage}}
+<title>{{h.DefaultsTitlePage}}</title>
+{{/titlepage}}
+<h1>pagina home:{{teste}}</h1>
+<hr>
+<ul>
+{{#h.menu}}
+<li><a href="{{slugs}}">{{name}}</a></li>
+{{/h.menu}}
+</ul>
+<hr>
+{{#titlepage}}
+<h1>{{teste}}</h1>
+{{/titlepage}}
+</html>
